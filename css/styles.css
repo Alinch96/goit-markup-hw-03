@@ -1,3 +1,10 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     color: #434455;
@@ -6,18 +13,62 @@ body {
     letter-spacing: 0.32px;
 }
 
+h1, h2, h3 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
 a {
     text-decoration: none;
+    display: block;
 }
 
 ul {
+    margin: 0;
+    padding: 0;
     list-style-type: none;
 }
 
-/* header */
-header {
-    padding-top: 24px;
+img {
+    display: block;
+    max-width:100%;
+    height: auto;
 
+
+}
+
+.container{
+    max-width: 1128px;
+    margin: 0 auto;
+}
+
+.page-header {
+    padding: 24px 0;
+    border-bottom: 1px solid  #E7E9FC;
+}
+
+.page-header .container {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.navigation-container {
+    display: flex;
+    gap: 76px;
+}
+
+.navigation-links {
+    display: flex;
+    gap: 40px;
+}
+
+.address-list {
+    display: flex;
+    gap:40px;
 }
 
 .logo {
@@ -72,6 +123,11 @@ header {
 
 /* First section */
 
+.first-section {
+    padding: 188px 0;
+    background-color: #2E2F42;
+}
+
 .page-title {
     color: #FFF;
     text-align: center;
@@ -79,19 +135,30 @@ header {
     font-weight: 700;
     line-height: 1.07;
     letter-spacing: 1.12px;
+    padding: 0 316px;
+    margin-bottom: 48px;
 }
 
-.central-buttom {
+.central-button {
     color: #FFF;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.64px;
     background-color: #4D5AE5;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     font-family: "Roboto", sans-serif;
     font-size: 16px;
-    letter-spacing: 0.64px;
-    cursor: pointer;
+    cursor: pointer; 
+    width: 169px;
+    display: inline-block;
+    align-items: center;
+    padding: 16px 32px;
+    margin-left: 480px;
+    margin-right: 479px;
+    
 }
+ 
 
 .central-buttom:hover,
 .central-buttom:focus {
@@ -99,14 +166,20 @@ header {
 }
 
 
-.first-section {
-    background-color: #2E2F42;
-}
-
 /* Second section, Our team, Our Portfolio section */
 
 .section-title-hidden {
-    visibility: hidden;
+    display: none;
+}
+
+.second-section {
+    padding: 120px 0;
+}
+
+.benefits-list {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
 }
 
 .section-title {
@@ -128,20 +201,90 @@ header {
 
 .team-section {
     background-color: #F4F4FD;
+    padding: 120px 0;
+} 
+
+.team-section .section-title{
+    margin-bottom: 72px;
 }
 
-.footer-text {
-    color: #F4F4FD;
-}
-
-.footer {
-    background-color: #2E2F42;
-}
-
-.footer .logo-studio {
-    color: #F4F4FD;
+.team-list{
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
 }
 
 .team-list-item {
-    background-color: #FFFFFF;
+    background-color: #FFF;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+    padding-bottom: 32px;
+
+}
+
+.team-list-item .list-title {
+    padding-top:32px;
+    text-align: center;
+}
+.team-list-item .list-text {
+    padding-top: 8px;
+    text-align: center;
+}
+
+.our-portfolio-section {
+    padding: 120px 0;
+}
+
+.our-portfolio-section .section-title {
+    margin-bottom: 72px;
+}
+
+.our-portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 48px;
+    column-gap: 24px;
+    flex-shrink: 0;
+    
+}
+.our-portfolio-list-item {
+    border: 1px solid #E7E9FC;
+    background-color:  #FFF;
+    width: calc((100% - 48px) / 3);
+    padding-bottom: 32px;
+
+}
+
+.our-portfolio-list-item .list-title {
+    padding: 0 16px;
+    margin-top: 32px;
+}
+
+.our-portfolio-list-item .list-text {
+    padding: 0 16px;
+    margin-top: 8px;
+}
+
+
+
+
+
+
+
+.page-footer {
+    background-color: #2E2F42;
+    padding-top:101.5px;
+    padding-bottom: 100px;
+}
+
+.page-footer .logo {
+    margin-bottom: 17.5px;
+}
+
+.page-footer .logo-studio {
+    color: #F4F4FD;
+}
+.footer-text {
+    max-width: 264px;
+    color: #F4F4FD;
 }
